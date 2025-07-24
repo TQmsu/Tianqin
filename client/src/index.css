@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400&display=swap');
+/* San Francisco Font - system font stack */
 
 @tailwind base;
 @tailwind components;
@@ -68,18 +68,26 @@
   }
 
   body {
-    @apply font-serif-body antialiased bg-background text-foreground;
+    @apply font-sf-body antialiased bg-background text-foreground;
     line-height: 1.6;
   }
 }
 
 @layer utilities {
-  .font-serif-heading {
-    font-family: 'Crimson Text', serif;
+  .font-sf-heading {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
   }
   
-  .font-serif-body {
-    font-family: 'Source Serif Pro', serif;
+  .font-sf-body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+  }
+  
+  .font-sf-medium {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 500;
   }
   
   .text-academic-navy {

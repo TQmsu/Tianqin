@@ -44,7 +44,7 @@ export class MemStorage implements IStorage {
       linkedin: "https://www.linkedin.com/in/lutianqin/",
       website: null,
       researchInterests: "Exploring digital technologies in healthcare, with a focus on health data collection and its applications.",
-      photoUrl: "https://images.unsplash.com/photo-1494790108755-2616b612b5bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      photoUrl: "@assets/1732425550304_1753354833655.jpg"
     };
     this.profiles.set(1, profile);
 
@@ -56,7 +56,7 @@ export class MemStorage implements IStorage {
         authors: "Tianqin Lu, Qingyuan Lin, Bin Yu, Jun Hu",
         venue: "npj Health Systems",
         year: 2025,
-        doi: null,
+        doi: "10.1038/s44401-025-00017-4",
         pdfUrl: null,
         publicationUrl: "https://www.researchgate.net/publication/391196855_A_systematic_review_of_strategies_in_digital_technologies_for_motivating_adherence_to_chronic_illness_self-care"
       },
@@ -66,7 +66,7 @@ export class MemStorage implements IStorage {
         authors: "Tianqin Lu, Anniek Jansen, Sichen Guo, François Leborgne",
         venue: "Proceedings of the Eighteenth International Conference on Tangible, Embedded, and Embodied Interaction (TEI)",
         year: 2024,
-        doi: null,
+        doi: "10.1145/3623509.3635865",
         pdfUrl: null,
         publicationUrl: "https://www.researchgate.net/publication/378139737_WonderMap_Capturing_and_Connecting_the_Edges_of_Cultures"
       },
@@ -96,7 +96,7 @@ export class MemStorage implements IStorage {
         authors: "Rosa van Tuijn, Tianqin Lu, Emma Driesse, K Franken, Pratik Gajane, Emilia Ivanova Barakova",
         venue: "IFIP Conference on Human-Computer Interaction",
         year: 2023,
-        doi: null,
+        doi: "10.1007/978-3-031-42286-7_11",
         pdfUrl: null,
         publicationUrl: "https://www.researchgate.net/publication/373378693_WeHeart_A_Personalized_Recommendation_Device_for_Physical_Activity_Encouragement_and_Preventing_Cold_Start_in_Cardiac_Rehabilitation"
       },

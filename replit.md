@@ -7,6 +7,9 @@ This is a full-stack web application built for showcasing academic profiles and 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Typography: San Francisco font family for modern, clean appearance.
+Visual hierarchy: Clear distinction between name (largest), section headings, publication titles, and body text.
+Profile photo: Use personal professional photo provided by user.
 
 ## System Architecture
 
@@ -70,7 +73,7 @@ Comprehensive set of reusable components including:
 ### Frontend Dependencies
 - **React Ecosystem**: React, React DOM, React Query
 - **UI Library**: Radix UI primitives for accessible components
-- **Styling**: Tailwind CSS, class-variance-authority for component variants
+- **Styling**: Tailwind CSS with San Francisco font system, class-variance-authority for component variants
 - **Forms**: React Hook Form with Hookform resolvers
 - **Utilities**: date-fns, clsx for utility functions
 
@@ -105,4 +108,14 @@ Comprehensive set of reusable components including:
 - **Database Push**: `npm run db:push` applies schema changes
 - **Connection**: Configured for Neon Database serverless PostgreSQL
 
-The application follows a clean separation of concerns with shared TypeScript types between frontend and backend, ensuring type safety across the full stack. The academic theme is reflected in the styling choices, with professional fonts (Crimson Text, Source Serif Pro) and a sophisticated color palette suitable for academic presentations.
+The application follows a clean separation of concerns with shared TypeScript types between frontend and backend, ensuring type safety across the full stack. The academic theme is reflected in the styling choices, with San Francisco font family for modern readability and a sophisticated color palette suitable for academic presentations.
+
+## Recent Changes (January 2025)
+
+- **Typography Update**: Replaced serif fonts with San Francisco font system for improved readability and modern appearance
+- **Profile Personalization**: Updated with Tianqin Lu's actual academic information from Eindhoven University of Technology
+- **Publication Data**: Added real publications from ResearchGate and Google Scholar with proper DOI links
+- **Visual Hierarchy**: Improved typography scaling (4xl for main heading, 2xl for publication titles, xl for section headings)
+- **Profile Photo**: Integrated user's personal professional photo
+- **Contact Information**: Removed personal website section, kept LinkedIn and email
+- **DOI Integration**: Added DOI links for available publications for better academic credibility
