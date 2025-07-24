@@ -119,3 +119,5 @@ The application follows a clean separation of concerns with shared TypeScript ty
 - **Profile Photo**: Integrated user's personal professional photo
 - **Contact Information**: Removed personal website section, kept LinkedIn and email
 - **DOI Integration**: Added DOI links for available publications for better academic credibility
+- **Database Migration**: Successfully migrated from in-memory storage to PostgreSQL with Drizzle ORM for persistent data storage
+- **GitHub Deployment Preparation**: Created comprehensive deployment guides and configuration files for hosting on GitHub with Vercel, Railway, and Netlify support
