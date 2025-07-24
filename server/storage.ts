@@ -34,76 +34,86 @@ export class MemStorage implements IStorage {
   }
 
   private initializeSampleData() {
-    // Create a sample profile
-    const sampleProfile: Profile = {
+    // Create your profile
+    const profile: Profile = {
       id: 1,
-      fullName: "Dr. Sarah Mitchell",
-      position: "PhD Student in Computer Science",
-      institution: "Stanford University",
-      email: "sarah.mitchell@stanford.edu",
-      linkedin: "https://www.linkedin.com/in/sarahmitchell",
-      website: "https://sarahmitchell.github.io",
-      researchInterests: "I specialize in machine learning applications for healthcare, with a focus on developing interpretable AI models for medical diagnosis and personalized treatment recommendations.",
+      fullName: "Tianqin Lu",
+      position: "PhD Student",
+      institution: "Eindhoven University of Technology",
+      email: "t.lu1@tue.nl",
+      linkedin: "https://www.linkedin.com/in/lutianqin/",
+      website: null,
+      researchInterests: "Exploring digital technologies in healthcare, with a focus on health data collection and its applications.",
       photoUrl: "https://images.unsplash.com/photo-1494790108755-2616b612b5bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     };
-    this.profiles.set(1, sampleProfile);
+    this.profiles.set(1, profile);
 
-    // Create sample publications
-    const samplePublications: Publication[] = [
+    // Your actual publications from ResearchGate and Google Scholar
+    const publications: Publication[] = [
       {
         id: 1,
-        title: "Interpretable Deep Learning Models for Early Alzheimer's Detection Using Multi-Modal Brain Imaging",
-        authors: "Sarah Mitchell, David Chen, Emily Rodriguez, Michael Thompson",
-        venue: "Nature Machine Intelligence",
-        year: 2024,
-        doi: "10.1038/s42256-024-00001-x",
-        pdfUrl: "#",
-        publicationUrl: "#"
+        title: "A systematic review of strategies in digital technologies for motivating adherence to chronic illness self-care",
+        authors: "Tianqin Lu, Qingyuan Lin, Bin Yu, Jun Hu",
+        venue: "npj Health Systems",
+        year: 2025,
+        doi: null,
+        pdfUrl: null,
+        publicationUrl: "https://www.researchgate.net/publication/391196855_A_systematic_review_of_strategies_in_digital_technologies_for_motivating_adherence_to_chronic_illness_self-care"
       },
       {
         id: 2,
-        title: "Federated Learning Framework for Privacy-Preserving Healthcare Analytics",
-        authors: "Sarah Mitchell, Jennifer Liu, Robert Garcia",
-        venue: "Proceedings of the 41st International Conference on Machine Learning (ICML)",
-        year: 2023,
-        doi: "10.48550/arXiv.2023.00001",
-        pdfUrl: "#",
-        publicationUrl: "#"
+        title: "WonderMap: Capturing and Connecting the Edges of Cultures",
+        authors: "Tianqin Lu, Anniek Jansen, Sichen Guo, François Leborgne",
+        venue: "Proceedings of the Eighteenth International Conference on Tangible, Embedded, and Embodied Interaction (TEI)",
+        year: 2024,
+        doi: null,
+        pdfUrl: null,
+        publicationUrl: "https://www.researchgate.net/publication/378139737_WonderMap_Capturing_and_Connecting_the_Edges_of_Cultures"
       },
       {
         id: 3,
-        title: "Attention Mechanisms in Medical Image Segmentation: A Comprehensive Survey",
-        authors: "Kevin Park, Sarah Mitchell, Anna Kowalski, James Wilson",
-        venue: "Medical Image Analysis",
-        year: 2023,
-        doi: "10.1016/j.media.2023.00001",
-        pdfUrl: "#",
-        publicationUrl: "#"
+        title: "Exploring Artistic Data Visualization Design for Health Monitoring: A Survey Study",
+        authors: "Tianqin Lu, Jun Hu",
+        venue: "From User to Human",
+        year: 2024,
+        doi: null,
+        pdfUrl: null,
+        publicationUrl: null
       },
       {
         id: 4,
-        title: "Transfer Learning for Small Dataset Medical Image Classification",
-        authors: "Sarah Mitchell, Thomas Anderson, Lisa Park",
-        venue: "IEEE Transactions on Medical Imaging",
-        year: 2022,
-        doi: "10.1109/TMI.2022.00001",
-        pdfUrl: "#",
-        publicationUrl: "#"
+        title: "E-Motioning: Exploring the Effects of Emotional Generative Visuals on Creativity and Connectedness during Videoconferencing",
+        authors: "Tianqin Lu",
+        venue: "2023 IASDR International Design Research Conference",
+        year: 2023,
+        doi: null,
+        pdfUrl: null,
+        publicationUrl: "https://www.researchgate.net/publication/374552685_E-Motioning_Exploring_the_Effects_of_Emotional_Generative_Visuals_on_Creativity_and_Connectedness_during_Videoconferencing"
       },
       {
         id: 5,
-        title: "Explainable AI in Healthcare: Current Challenges and Future Directions",
-        authors: "Maria Rodriguez, Sarah Mitchell, Christopher Lee, Daniel Kim",
-        venue: "Artificial Intelligence in Medicine",
-        year: 2022,
-        doi: "10.1016/j.artmed.2022.00001",
+        title: "WeHeart: A Personalized Recommendation Device for Physical Activity Encouragement and Preventing \"Cold Start\" in Cardiac Rehabilitation",
+        authors: "Rosa van Tuijn, Tianqin Lu, Emma Driesse, K Franken, Pratik Gajane, Emilia Ivanova Barakova",
+        venue: "IFIP Conference on Human-Computer Interaction",
+        year: 2023,
+        doi: null,
         pdfUrl: null,
-        publicationUrl: "#"
+        publicationUrl: "https://www.researchgate.net/publication/373378693_WeHeart_A_Personalized_Recommendation_Device_for_Physical_Activity_Encouragement_and_Preventing_Cold_Start_in_Cardiac_Rehabilitation"
+      },
+      {
+        id: 6,
+        title: "A-Vibe: Exploring the Impact of Animal-form Avatars on Students' Connectedness and Social Presence through Delivering Honest Signals in Live Online Classes",
+        authors: "Tianqin Lu, Jun Hu",
+        venue: "12th International Conference on Design and Semantics of Form and Movement",
+        year: 2023,
+        doi: null,
+        pdfUrl: null,
+        publicationUrl: null
       }
     ];
 
-    samplePublications.forEach(pub => this.publications.set(pub.id, pub));
-    this.currentPublicationId = 6;
+    publications.forEach(pub => this.publications.set(pub.id, pub));
+    this.currentPublicationId = 7;
   }
 
   async getUser(id: number): Promise<User | undefined> {

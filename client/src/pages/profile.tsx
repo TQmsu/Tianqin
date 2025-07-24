@@ -56,19 +56,6 @@ function PersonalInfoSidebar({ profile }: { profile: Profile }) {
                 </a>
               </div>
             )}
-            {profile.website && (
-              <div className="flex items-center text-sm">
-                <Globe className="w-4 h-4 mr-3 text-academic-accent flex-shrink-0" />
-                <a 
-                  href={profile.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-academic-accent hover:text-academic-navy transition-colors duration-200"
-                >
-                  Personal Website
-                </a>
-              </div>
-            )}
           </div>
         </div>
 
@@ -115,7 +102,7 @@ function PublicationsList({ publications }: { publications: Publication[] }) {
                 </h3>
                 <p className="text-base text-academic-charcoal">
                   {publication.authors.split(', ').map((author, i, arr) => {
-                    const isCurrentAuthor = author.includes('Sarah Mitchell');
+                    const isCurrentAuthor = author.includes('Tianqin Lu');
                     return (
                       <span key={i}>
                         {isCurrentAuthor ? <strong>{author}</strong> : author}
