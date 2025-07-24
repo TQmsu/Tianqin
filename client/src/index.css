@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Academic color scheme */
+  --academic-navy: hsl(218, 65%, 32%);
+  --academic-charcoal: hsl(213, 18%, 32%);
+  --academic-light: hsl(214, 32%, 97%);
+  --academic-accent: hsl(213, 94%, 68%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+  
+  /* Dark academic colors */
+  --academic-navy: hsl(218, 65%, 45%);
+  --academic-charcoal: hsl(213, 18%, 85%);
+  --academic-light: hsl(240, 10%, 3.9%);
+  --academic-accent: hsl(213, 94%, 68%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-serif-body antialiased bg-background text-foreground;
+    line-height: 1.6;
+  }
+}
+
+@layer utilities {
+  .font-serif-heading {
+    font-family: 'Crimson Text', serif;
+  }
+  
+  .font-serif-body {
+    font-family: 'Source Serif Pro', serif;
+  }
+  
+  .text-academic-navy {
+    color: var(--academic-navy);
+  }
+  
+  .text-academic-charcoal {
+    color: var(--academic-charcoal);
+  }
+  
+  .bg-academic-light {
+    background-color: var(--academic-light);
+  }
+  
+  .text-academic-accent {
+    color: var(--academic-accent);
+  }
+  
+  .border-academic-accent {
+    border-color: var(--academic-accent);
+  }
+  
+  .hover\:text-academic-navy:hover {
+    color: var(--academic-navy);
+  }
+  
+  .hover\:border-academic-accent:hover {
+    border-color: var(--academic-accent);
+  }
+}
