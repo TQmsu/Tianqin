@@ -26,11 +26,11 @@
   --ring: hsl(20, 14.3%, 4.1%);
   --radius: 0.5rem;
   
-  /* Academic color scheme */
-  --academic-navy: hsl(218, 65%, 32%);
+  /* Professional color scheme */
+  --academic-navy: hsl(220, 26%, 25%);
   --academic-charcoal: hsl(213, 18%, 32%);
-  --academic-light: hsl(214, 32%, 97%);
-  --academic-accent: hsl(213, 94%, 68%);
+  --academic-light: hsl(220, 20%, 98%);
+  --academic-accent: hsl(24, 95%, 53%);
 }
 
 .dark {
@@ -55,11 +55,11 @@
   --ring: hsl(240, 4.9%, 83.9%);
   --radius: 0.5rem;
   
-  /* Dark academic colors */
-  --academic-navy: hsl(218, 65%, 45%);
+  /* Dark professional colors */
+  --academic-navy: hsl(220, 26%, 75%);
   --academic-charcoal: hsl(213, 18%, 85%);
   --academic-light: hsl(240, 10%, 3.9%);
-  --academic-accent: hsl(213, 94%, 68%);
+  --academic-accent: hsl(24, 95%, 63%);
 }
 
 @layer base {

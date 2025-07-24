@@ -83,10 +83,10 @@ export class MemStorage implements IStorage {
       {
         id: 4,
         title: "E-Motioning: Exploring the Effects of Emotional Generative Visuals on Creativity and Connectedness during Videoconferencing",
-        authors: "Tianqin Lu",
+        authors: "Tianqin Lu, Jun Hu",
         venue: "2023 IASDR International Design Research Conference",
         year: 2023,
-        doi: null,
+        doi: "10.21606/iasdr.2023.101",
         pdfUrl: null,
         publicationUrl: "https://www.researchgate.net/publication/374552685_E-Motioning_Exploring_the_Effects_of_Emotional_Generative_Visuals_on_Creativity_and_Connectedness_during_Videoconferencing"
       },

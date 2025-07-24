@@ -7,7 +7,7 @@ import type { Profile, Publication } from "@shared/schema";
 function PersonalInfoSidebar({ profile }: { profile: Profile }) {
   return (
     <div className="lg:col-span-4 xl:col-span-4">
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 lg:sticky lg:top-8">
+      <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-8 lg:sticky lg:top-8">
         {/* Professional Photo */}
         <div className="text-center mb-8">
           <img 
@@ -16,7 +16,7 @@ function PersonalInfoSidebar({ profile }: { profile: Profile }) {
               : profile.photoUrl || "https://images.unsplash.com/photo-1494790108755-2616b612b5bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
             } 
             alt={`${profile.fullName} - Professional Photo`}
-            className="w-36 h-36 rounded-full mx-auto object-cover border-4 border-academic-light shadow-lg"
+            className="w-40 h-40 rounded-full mx-auto object-cover border-4 border-white shadow-xl ring-4 ring-gray-100"
           />
         </div>
 
@@ -34,26 +34,26 @@ function PersonalInfoSidebar({ profile }: { profile: Profile }) {
         </div>
 
         {/* Contact Information */}
-        <div className="border-t border-gray-200 pt-8 mb-8">
+        <div className="border-t border-gray-100 pt-8 mb-8">
           <h3 className="text-xl font-sf-heading text-academic-navy mb-6">Contact</h3>
-          <div className="space-y-3">
-            <div className="flex items-center text-sm">
-              <Mail className="w-4 h-4 mr-3 text-academic-accent flex-shrink-0" />
+          <div className="space-y-4">
+            <div className="flex items-center text-base group">
+              <Mail className="w-5 h-5 mr-4 text-academic-accent flex-shrink-0 group-hover:scale-110 transition-transform duration-200" />
               <a 
                 href={`mailto:${profile.email}`}
-                className="text-academic-accent hover:text-academic-navy transition-colors duration-200"
+                className="text-academic-accent hover:text-academic-navy transition-colors duration-200 font-sf-medium"
               >
                 {profile.email}
               </a>
             </div>
             {profile.linkedin && (
-              <div className="flex items-center text-sm">
-                <Linkedin className="w-4 h-4 mr-3 text-academic-accent flex-shrink-0" />
+              <div className="flex items-center text-base group">
+                <Linkedin className="w-5 h-5 mr-4 text-academic-accent flex-shrink-0 group-hover:scale-110 transition-transform duration-200" />
                 <a 
                   href={profile.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-academic-accent hover:text-academic-navy transition-colors duration-200"
+                  className="text-academic-accent hover:text-academic-navy transition-colors duration-200 font-sf-medium"
                 >
                   LinkedIn Profile
                 </a>
@@ -63,9 +63,9 @@ function PersonalInfoSidebar({ profile }: { profile: Profile }) {
         </div>
 
         {/* Research Interests */}
-        <div className="border-t border-gray-200 pt-8">
-          <h3 className="text-xl font-sf-heading text-academic-navy mb-6">Research Interests</h3>
-          <p className="text-base font-sf-body leading-relaxed text-gray-700">
+        <div className="border-t border-gray-100 pt-8">
+          <h3 className="text-xl font-sf-heading text-academic-navy mb-6">Research Focus</h3>
+          <p className="text-base font-sf-body leading-relaxed text-gray-700 bg-gray-50 p-4 rounded-lg">
             {profile.researchInterests}
           </p>
         </div>
@@ -77,16 +77,16 @@ function PersonalInfoSidebar({ profile }: { profile: Profile }) {
 function PublicationsList({ publications }: { publications: Publication[] }) {
   return (
     <div className="lg:col-span-8 xl:col-span-8">
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 lg:p-8">
-        <h2 className="text-4xl font-sf-heading text-academic-navy mb-10 border-b border-gray-200 pb-6">
+      <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-8 lg:p-10">
+        <h2 className="text-4xl font-sf-heading text-academic-navy mb-12 border-b-2 border-academic-accent pb-6">
           Publications
         </h2>
 
-        <div className="space-y-8">
+        <div className="space-y-10">
           {publications.map((publication, index) => (
             <article 
               key={publication.id} 
-              className={`publication-entry group ${index > 0 ? 'border-t border-gray-100 pt-8' : ''}`}
+              className={`publication-entry group hover:bg-gray-50 p-6 rounded-lg transition-all duration-200 ${index > 0 ? 'border-t border-gray-100 pt-10' : ''}`}
             >
               <div className="flex flex-col space-y-3">
                 <h3 className="text-2xl font-sf-heading font-semibold text-academic-navy leading-tight">
@@ -125,9 +125,9 @@ function PublicationsList({ publications }: { publications: Publication[] }) {
                         href={`https://doi.org/${publication.doi}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-academic-accent hover:text-academic-navy transition-colors duration-200 flex items-center font-sf-medium"
+                        className="text-academic-accent hover:text-academic-navy transition-all duration-200 flex items-center font-sf-medium bg-academic-accent/10 px-3 py-1 rounded-full hover:bg-academic-accent/20"
                       >
-                        <ExternalLink className="w-4 h-4 mr-1" />
+                        <ExternalLink className="w-4 h-4 mr-2" />
                         DOI
                       </a>
                     )}
@@ -136,9 +136,9 @@ function PublicationsList({ publications }: { publications: Publication[] }) {
                         href={publication.pdfUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-academic-accent hover:text-academic-navy transition-colors duration-200 flex items-center font-sf-medium"
+                        className="text-academic-accent hover:text-academic-navy transition-all duration-200 flex items-center font-sf-medium bg-academic-accent/10 px-3 py-1 rounded-full hover:bg-academic-accent/20"
                       >
-                        <FileText className="w-4 h-4 mr-1" />
+                        <FileText className="w-4 h-4 mr-2" />
                         PDF
                       </a>
                     ) : publication.pdfUrl === '#' ? (
@@ -234,10 +234,10 @@ export default function Profile() {
   }
 
   return (
-    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8 bg-academic-light">
+    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-academic-light via-white to-gray-50">
       <div className="max-w-7xl mx-auto">
         {/* Main Grid Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
           <PersonalInfoSidebar profile={profile} />
           <PublicationsList publications={publications} />
         </div>
